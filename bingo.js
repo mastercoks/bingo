@@ -65,6 +65,5 @@ export default {
     for (const number of playerData.numbers) {
       if (numberDrawn === number) playerData.score++;
     }
-    console.log(numberDrawn, playerData);
   }
 }

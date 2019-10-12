@@ -10,6 +10,7 @@ class Player {
       let random = getNumberNotRepeated(valueMin, valueMax, this.numbers);      
       this.numbers.push(random);      
     }
+    this.numbers = this.numbers.sort((a, b) => a - b);
   }
 }
 
