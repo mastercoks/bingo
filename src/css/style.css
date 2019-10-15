@@ -5,7 +5,7 @@ html, body {
   margin: 0;
   font-family: 'Roboto';
   color: #d0d0ef;
-  min-width: 486px;
+  /* min-width: 486px; */
 }
 
 .material-icons-outlined {
@@ -62,9 +62,10 @@ aside {
 
 .controls {
   background-color: #322846;
-  padding: 8px;
+  flex-wrap: wrap;
   border-bottom: 2px solid #1d1a28;
   display: flex;
+  padding: 0 8px;
 }
 
 .controls input {
@@ -74,13 +75,32 @@ aside {
   border: none;
   color: #fafafa;
   height: 20px;
-  flex: 1;
+  flex: 10;
   font-family: 'Roboto';
   font-size: 14px;
+  margin: 8px 8px 8px 0px;
+  margin-bottom: auto;
+  width: 100px;
 }
 
 .controls input::placeholder {
   color: #d0d0ef;
+}
+
+.group-buttons {
+  width: -webkit-fill-available;
+  margin: 8px auto;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.group-buttons .btn {
+  margin-right: 8px;
+}
+
+#button-restart {
+  margin: 0;
 }
 
 .btn {
@@ -88,7 +108,6 @@ aside {
   color: #d0d0ef;
   border: 2px solid #242132;
   border-radius: 4px;
-  margin-left: 8px;
   cursor: pointer;
   background-color: transparent;
   font-family: 'Roboto';
@@ -224,7 +243,6 @@ aside {
 }
 
 .ranking {
-  /* min-width: 300px; */
   width: -webkit-fill-available;
 }
 
@@ -393,7 +411,7 @@ aside {
   padding: 20px;
   border: 1px solid #888;
   width: 20%;
-  min-width: 300px;
+  min-width: 200px;
   color: #1d1a28;
   border-radius: 10px;
   animation-name: animatetop;
