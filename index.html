@@ -5,19 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bingo</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'> -->
+  <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-  <div class="form">
-    <label for="input-name">Nome:</label>
-    <div class="name">
-      <input id="input-name" type="text">
+  <header>
+    <div class="header-space"></div>
+    <div class="logo">
+      <img src="./src/assets/logo.svg" alt="Logo">
+      <div>Bingo</div> 
     </div>
-    <button id="button-generate">Gerar Cartela</button>
-    <button id="button-draw">Sortear Número</button>
+    <a id="hide-ranking"><i class="material-icons-outlined" id="expand">expand_less</i></a>
+  </header>
+  <div class="row wrap-reverse">
+    <main>
+      <div class="controls">
+        <input id="input-name" type="text" placeholder="Insira o Nome">
+        <button id="button-generate" class="btn">Cadastrar</button>
+        <button id="button-drawn" class="btn" disabled>Sortear</button>
+        <button id="button-restart" class="btn" disabled>Recomeçar</button>
+      </div>
+      <div class="row container">
+  
+        <div class="last-numbers">
+          <div class="last-header">
+            <div id="last" class="last-number"></div>
+          </div>
+          <div class="last-content">
+            <h3 class="title">Últimos números</h3>
+            <div class="last-five">
+              <div id="last-but-one" class="last-number"></div>
+              <div id="last-but-two" class="last-number"></div>
+              <div id="last-but-three" class="last-number"></div>
+              <div id="last-but-four" class="last-number"></div>
+              <div id="last-but-five" class="last-number"></div>
+            </div>
+          </div>
+        </div>
+        <div class="space"></div>
+        <div id="numbers-drawn"></div>
+      </div>
+      <div id="cards"></div>
+    </main>
+    <aside id="ranking">
+      <table class="ranking" cellspacing="0" cellpadding="8">
+        <thead>
+          <tr>
+            <th class="left"><i class="material-icons-outlined">person</i></th>
+            <th><i class="material-icons-outlined">local_activity</i></th>
+            <th><i class="material-icons-outlined">emoji_events</i></th>
+          </tr>
+        </thead>
+        <tbody id="ranking-body"></tbody>
+      </table>
+    </aside>
   </div>
-  <div id="numbers-drawn"></div>
-  <div id="cards"></div>
-  <script src="index.js" type="module"></script>
+
+  <div id="modal-info" class="hide">
+    <div class="modal-content">
+      <div id="modal-icon"></div>
+      <h2 id="modal-title">Atenção</h2>
+      <p id="modal-text">Preencha o campo!</p>
+      <button id="button-close" class="btn">FECHAR</button>
+    </div>
+  </div>
+  <script src="./src/js/index.js" type="module"></script>
 </body>
 </html>

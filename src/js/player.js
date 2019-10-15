@@ -1,4 +1,4 @@
-import { getNumberNotRepeated } from "./utils.js";
+import { getNumberNotRepeated, getRandomColor } from "./utils.js";
 
 class Player {
   constructor(id, name, valueMin, valueMax, qtyNumbers) {
@@ -6,10 +6,12 @@ class Player {
     this.name = name;
     this.numbers = [];
     this.score = 0;
+    this.color = getRandomColor();
     for (let i = 0; i < qtyNumbers; i++) {
       let random = getNumberNotRepeated(valueMin, valueMax, this.numbers);      
       this.numbers.push(random);      
     }
+    this.numbers = this.numbers.sort((a, b) => a - b);
   }
 }
 
